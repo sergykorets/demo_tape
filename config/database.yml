@@ -1,0 +1,18 @@
+postgresql_base: &postgresql_base
+  adapter: postgresql
+  host: localhost
+  encoding: utf8
+  reconnect: true
+  pool: 5
+
+development:
+  <<: *postgresql_base
+  database: demo_tape_development
+
+production:
+  <<: *postgresql_base
+  database: demo_tape_production
+
+test:
+  <<: *postgresql_base
+  database: demo_tape_test
