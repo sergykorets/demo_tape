@@ -31,7 +31,6 @@ gem 'rspotify'
 gem 'twilio-ruby'
 gem "react_on_rails"
 gem "webpacker"
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -63,3 +62,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'mini_racer', platforms: :ruby
