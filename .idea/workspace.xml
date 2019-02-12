@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d282921d-7349-4c55-a480-9b97bf3b9f93" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change beforePath="$PROJECT_DIR$/Procfile.dev" afterPath="$PROJECT_DIR$/Procfile.dev" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -102,14 +102,34 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+            <state relative-caret-position="184">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="puma.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/puma.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Procfile.dev" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile.dev">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="575">
@@ -233,6 +253,7 @@
         <option value="$PROJECT_DIR$/app/validators/song_finder_validator.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/Procfile.dev" />
       </list>
     </option>
   </component>
@@ -407,6 +428,12 @@
             <path>
               <item name="demo_tape" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo_tape" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo_tape" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo_tape" type="462c0819:PsiDirectoryNode" />
               <item name="spec" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -572,12 +599,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549906973952</updated>
-      <workItem from="1549906975048" duration="24169000" />
+      <workItem from="1549906975048" duration="24989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24169000" />
+    <option name="totallyTimeSpent" value="24989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -855,18 +882,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/puma.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile.dev">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
