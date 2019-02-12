@@ -45,7 +45,10 @@ group :development, :test do
   gem 'factory_bot_rails', require: false
   gem 'faker', require: false
   gem 'rspec-rails'
+  gem 'rails-controller-testing'
   gem 'shoulda-matchers'
+  gem 'webmock'
+  gem 'json_spec'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

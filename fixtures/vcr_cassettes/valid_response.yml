@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://lookups.twilio.com/v1/PhoneNumbers/+12813181031?Type=carrier
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - twilio-ruby/5.20.0 (ruby/x86_64-darwin17 2.5.0-p0)
+      Accept-Charset:
+      - utf-8
+      Accept:
+      - application/json
+      Authorization:
+      - Basic QUNmOTc0MGI2YWM2OTRhOTc0MWM5NmE3YTRiNGFkZmI0Mjo2MDUxZDdjZDExNWM1ZDUyZDRhNjFhZTFlOGVjMDgzYw==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 12 Feb 2019 12:08:25 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Twilio-Concurrent-Requests:
+      - '1'
+      Twilio-Request-Duration:
+      - '0.066'
+      Twilio-Request-Id:
+      - RQ14f02505d3344d4b8f4c34820c6ac727
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '383'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"caller_name": null, "country_code": "US", "phone_number": "+12813181031",
+        "national_format": "(281) 318-1031", "carrier": {"mobile_country_code": null,
+        "mobile_network_code": null, "name": "Bandwidth Bandwidth SMS-Enabled-2 -
+        Bandwidth CLEC - SVR", "type": "voip", "error_code": null}, "add_ons": null,
+        "url": "https://lookups.twilio.com/v1/PhoneNumbers/+12813181031?Type=carrier"}'
+    http_version: 
+  recorded_at: Tue, 12 Feb 2019 12:08:25 GMT
+recorded_with: VCR 4.0.0

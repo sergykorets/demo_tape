@@ -9,7 +9,7 @@ export default class SongFinder extends React.Component {
       artist: '',
       phone: '',
       smsStatus: 'initial',
-      message: ''
+      messages: []
     };
   }
 
@@ -21,9 +21,9 @@ export default class SongFinder extends React.Component {
     axios.post('/song_finder', {artist: this.state.artist, phone: this.state.phone})
       .then(resp => {
         if (resp.data.success) {
-          this.setState({smsStatus: 'delivered', message: resp.data.message})
+          this.setState({smsStatus: 'delivered', messages: resp.data.messages})
         } else {
-          this.setState({smsStatus: 'failed', message: resp.data.message})
+          this.setState({smsStatus: 'failed', messages: resp.data.messages})
         }
       });
   }
@@ -49,16 +49,18 @@ export default class SongFinder extends React.Component {
           value={this.state.phone}
           onChange={(e) => this.updateField('phone', e.target.value)}
         />
-        <button disabled={this.state.artist.length == 0 || this.state.phone.length == 0 } onClick={this.sendTopTrack}>Send track</button>
+        <button disabled={this.state.artist.length == 0 || this.state.phone.length == 0} onClick={this.sendTopTrack}>Send track</button>
         { this.state.smsStatus === 'delivered' &&
           <Fragment>
             <h1>SMS sent</h1>
-            <h3>SMS body text: {this.state.message}</h3>
+            <h3>SMS body text: {this.state.messages[0]}</h3>
           </Fragment>}
         { this.state.smsStatus === 'failed' &&
           <Fragment>
             <h1>SMS delivery failed</h1>
-            <h3>Message: {this.state.message}</h3>
+            <h3>Errors:</h3>
+            { this.state.messages.map((message, i) =>
+              <h4 key={i}>{message}</h4>)}
           </Fragment>}
       </div>
     );

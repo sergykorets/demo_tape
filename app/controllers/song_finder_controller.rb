@@ -3,17 +3,19 @@ class SongFinderController < ApplicationController
   def index; end
 
   def create
-    spotify = SpotifyService.get_top_track(params[:artist])
-    if spotify
-      message = "#{spotify[:artist]}'s top track: #{spotify[:top_track]}"
-      sms_status = TwilioService.send_sms(params[:phone], message)
-      unless sms_status.is_a?(Twilio::REST::TwilioError)
-        render json: {success: true, message: message}
+    validation_params = {artist: params[:artist], phone: params[:phone]}
+    validator = SongFinderValidator.new(validation_params)
+    if validator.valid?
+      spotify = SpotifyService.get_top_track(params[:artist])
+      if spotify
+        message = "#{spotify[:artist]}'s top track: #{spotify[:top_track]}"
+        TwilioService.send_sms(validator.phone, message)
+        render json: {success: true, messages: [message]}
       else
-        render json: {success: false, message: sms_status}
+        render json: {success: false, messages: ['Top track not found']}
       end
     else
-      render json: {success: false, message: 'Top track not found'}
+      render json: {success: false, messages: validator.errors.full_messages}
     end
   end
 end

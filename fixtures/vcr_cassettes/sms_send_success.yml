@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twilio.com/2010-04-01/Accounts/ACf9740b6ac694a9741c96a7a4b4adfb42/Messages.json
+    body:
+      encoding: UTF-8
+      string: Body=Test+sms&From=%2B18317132777&To=%2B18022425759
+    headers:
+      User-Agent:
+      - twilio-ruby/5.20.0 (ruby/x86_64-darwin17 2.5.0-p0)
+      Accept-Charset:
+      - utf-8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Authorization:
+      - Basic QUNmOTc0MGI2YWM2OTRhOTc0MWM5NmE3YTRiNGFkZmI0Mjo2MDUxZDdjZDExNWM1ZDUyZDRhNjFhZTFlOGVjMDgzYw==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 12 Feb 2019 11:24:24 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Twilio-Concurrent-Requests:
+      - '1'
+      Twilio-Request-Duration:
+      - '0.110'
+      Twilio-Request-Id:
+      - RQ3a26cbcd2966438991e228b31af2601d
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '772'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM9d7e56389ba942b8b60596ffa8b5cd1f", "date_created": "Tue,
+        12 Feb 2019 11:24:24 +0000", "date_updated": "Tue, 12 Feb 2019 11:24:24 +0000",
+        "date_sent": null, "account_sid": "ACf9740b6ac694a9741c96a7a4b4adfb42", "to":
+        "+18022425759", "from": "+18317132777", "messaging_service_sid": null, "body":
+        "Test sms", "status": "queued", "num_segments": "1", "num_media": "0", "direction":
+        "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit":
+        "USD", "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/ACf9740b6ac694a9741c96a7a4b4adfb42/Messages/SM9d7e56389ba942b8b60596ffa8b5cd1f.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACf9740b6ac694a9741c96a7a4b4adfb42/Messages/SM9d7e56389ba942b8b60596ffa8b5cd1f/Media.json"}}'
+    http_version: 
+  recorded_at: Tue, 12 Feb 2019 11:24:24 GMT
+recorded_with: VCR 4.0.0
